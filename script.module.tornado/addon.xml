@@ -9,7 +9,7 @@
     <import addon="script.module.singledispatch" version="3.4.0" />
     <import addon="script.module.six" version="1.11" />
   </requires>
-  <extension point="xbmc.python.module" library="tornado" />
+  <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">Tornado is a Python web framework and asynchronous networking library.</summary>
     <description lang="en_GB">Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.</description>
