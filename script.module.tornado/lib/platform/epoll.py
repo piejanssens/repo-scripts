@@ -1,5 +1,5 @@
 #
-# Copyright 2009 Facebook
+# Copyright 2012 Facebook
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
@@ -12,17 +12,14 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
-
-"""The Tornado web server and tools."""
-
+"""EPoll-based IOLoop implementation for Linux systems."""
 from __future__ import absolute_import, division, print_function
 
-# version is a human-readable version number.
+import select
 
-# version_info is a four-tuple for programmatic comparison. The first
-# three numbers are the components of the version number.  The fourth
-# is zero for an official release, positive for a development branch,
-# or negative for a release candidate or beta (after the base version
-# number has been incremented)
-version = "5.1.1"
-version_info = (5, 1, 1, 0)
+from tornado.ioloop import PollIOLoop
+
+
+class EPollIOLoop(PollIOLoop):
+    def initialize(self, **kwargs):
+        super(EPollIOLoop, self).initialize(impl=select.epoll(), **kwargs)
