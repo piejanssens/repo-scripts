@@ -5,6 +5,9 @@
        provider-name="Pieter Janssens">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.futures" version="2.2.0" />
+    <import addon="script.module.singledispatch" version="3.4.0" />
+    <import addon="script.module.six" version="1.11" />
   </requires>
   <extension point="xbmc.python.module"
              library="lib" />
