@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.ptvsd"
+       name="ptvsd"
+       version="4.3.2"
+       provider-name="Pieter Janssens">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="ptvsd" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Remote debugging server for Python support in Visual Studio and Visual Studio Code.</summary>
+    <description lang="en_GB"></description>
+    <platform>all</platform>
+    <license>Eclipse Public License 2.0 (EPL-2.0), MIT License (MIT)</license>
+    <website>https://github.com/microsoft/ptvsd</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
